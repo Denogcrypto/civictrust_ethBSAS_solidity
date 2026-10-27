@@ -126,7 +126,8 @@ El anonimato práctico requiere un grupo con suficientes integrantes. El contrat
 - [Guía de inicio y configuración](GUIA_MVP_CIVICTRUST.md)
 - [Guía de usuario](GUIA_USUARIO_CIVICTRUST.md)
 - [Resumen del proyecto](RESUMEN_CIVICTRUST.md)
-- [White paper](WHITE_PAPER_CIVICTRUST.md)
+- [Whitepaper de entrega (PDF)](CIVICTRUST_WHITEPAPER_FERRARO.pdf)
+- [Fuente del whitepaper (Markdown)](WHITE_PAPER_CIVICTRUST.md)
 - [Speech para hackathon](SPEECH_HACKATHON_CIVICTRUST.md)
 
 ## Licencia
