@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#102a43" />
+    <title>CivicTrust — Presupuesto participativo</title>
+    <link rel="stylesheet" href="/app/styles.css" />
+    <script type="module" src="/app/app.js"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="CivicTrust inicio">
+        <span class="brand-mark" aria-hidden="true">C</span>
+        <span>CivicTrust</span>
+      </a>
+      <div class="topbar-actions">
+        <span class="network-pill"><span class="status-dot"></span> Demo local · Semaphore ZK</span>
+        <button id="connect-button" class="button button-dark" type="button">Administrar comuna</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">PRESUPUESTO PARTICIPATIVO · COMUNA 13</p>
+          <h1>Tu barrio.<br /><span>Tus decisiones.</span></h1>
+          <p class="hero-description">Elegí una propuesta con una identidad privada. La blockchain verifica que estás en el padrón sin revelar quién sos ni qué opción elegiste.</p>
+          <div class="hero-meta">
+            <span class="meta-item"><span class="meta-icon">01</span> Prueba ZK de pertenencia</span>
+            <span class="meta-item"><span class="meta-icon">02</span> Escrutinio público</span>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="visual-card">
+            <span class="visual-kicker">DECISIÓN VECINAL</span>
+            <div class="visual-symbol">✳</div>
+            <div class="visual-lines"><i></i><i></i><i></i></div>
+            <span class="visual-caption">Una comuna<br />más participativa</span>
+          </div>
+          <span class="visual-badge badge-top">VOTO<br />ANÓNIMO</span>
+          <span class="visual-badge badge-bottom">100%<br />AUDITABLE</span>
+        </div>
+      </section>
+
+      <section class="prototype-note" aria-label="Alcance de esta demostración">
+        <span class="note-icon">i</span>
+        <p><strong>Prototipo local:</strong> usa identidades de prueba registradas manualmente por el administrador y una blockchain local. No está conectado con miBA ni con un padrón real. Para que el anonimato práctico tenga sentido, la votación requiere al menos tres identidades elegibles.</p>
+      </section>
+
+      <section class="workspace" aria-labelledby="polls-heading">
+        <section class="setup-card network-card" aria-labelledby="setup-heading">
+          <div class="setup-copy">
+            <span class="setup-step">RED LOCAL</span>
+            <h3 id="setup-heading">CivicTrust está listo para usar</h3>
+            <p>La consulta y sus resultados se leen desde la blockchain local. MetaMask solo hace falta para administrar el padrón o las consultas.</p>
+          </div>
+          <p id="connection-status" class="connection-status" role="status">Conectando con el contrato local…</p>
+        </section>
+
+        <section class="identity-card" aria-labelledby="identity-heading">
+          <div class="identity-copy">
+            <p class="eyebrow">TU IDENTIDAD PRIVADA</p>
+            <h2 id="identity-heading">Prepará tu credencial de voto</h2>
+            <p>Creá una identidad Semaphore en este navegador. Guardá el archivo secreto y compartí con el administrador solo el compromiso público para que te agregue al padrón.</p>
+          </div>
+          <div class="identity-controls">
+            <div class="identity-actions">
+              <button id="create-identity" class="button button-primary" type="button">Crear identidad privada</button>
+              <label class="button button-outline file-button" for="identity-file">Importar credencial</label>
+              <input id="identity-file" type="file" accept="application/json,.json,.txt" class="sr-only" />
+            </div>
+            <div id="identity-result" class="identity-result hidden" aria-live="polite">
+              <p id="identity-status" class="connection-status" role="status"></p>
+              <label for="identity-commitment">Compromiso público para el administrador</label>
+              <div class="commitment-row">
+                <input id="identity-commitment" type="text" readonly spellcheck="false" />
+                <button id="copy-commitment" class="button button-outline" type="button">Copiar</button>
+              </div>
+              <button id="download-identity" class="button button-outline" type="button">Descargar copia secreta</button>
+            </div>
+            <p class="identity-warning">No compartas el archivo secreto: quien lo tenga puede votar en tu nombre. CivicTrust no lo sube al servidor.</p>
+          </div>
+        </section>
+
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">CONSULTA ABIERTA</p>
+            <h2 id="polls-heading">Propuestas para el barrio</h2>
+            <p class="section-description">Los votos se verifican con pruebas de conocimiento cero y se cuentan públicamente al confirmarse en la red local.</p>
+          </div>
+          <div class="stats" aria-label="Resumen de participación">
+            <div class="stat"><strong id="poll-count">—</strong><span>consultas</span></div>
+            <div class="stat"><strong id="vote-count">—</strong><span>votos</span></div>
+          </div>
+        </div>
+
+        <div id="poll-list" class="poll-list">
+          <div class="empty-state"><span class="empty-icon">✳</span><h3>Cargando propuestas</h3><p>Conectando con la blockchain local.</p></div>
+        </div>
+
+        <section id="admin-panel" class="admin-panel hidden" aria-labelledby="admin-heading">
+          <div class="admin-heading">
+            <div>
+              <p class="eyebrow">PANEL DE COMUNA</p>
+              <h2 id="admin-heading">Administrar padrón y consultas</h2>
+              <p class="section-description">Registrá compromisos de identidad sin asociarlos a nombres o direcciones. Esta demo no valida la identidad civil.</p>
+            </div>
+            <span class="admin-badge">ADMINISTRADOR</span>
+          </div>
+
+          <div class="member-summary"><strong id="member-count">0</strong><span>identidades elegibles registradas</span></div>
+          <form id="member-form" class="admin-form">
+            <label>Compromisos públicos <span class="label-hint">uno por línea; no pegues archivos secretos</span>
+              <textarea name="commitments" rows="3" placeholder="Pegá aquí el compromiso público que te comparte cada vecino" required></textarea>
+            </label>
+            <div class="form-footer">
+              <p>Los compromisos se registran en la red local y quedan visibles públicamente.</p>
+              <button class="button button-primary" type="submit">Agregar al padrón</button>
+            </div>
+          </form>
+
+          <form id="create-poll-form" class="admin-form">
+            <h3>Publicar una consulta</h3>
+            <label>Título de la consulta
+              <input name="title" type="text" maxlength="120" placeholder="Ej.: ¿Qué mejora priorizamos en la plaza?" required />
+            </label>
+            <label>Descripción
+              <textarea name="description" maxlength="1000" rows="3" placeholder="Contá qué se está decidiendo y en qué barrio."></textarea>
+            </label>
+            <div class="admin-form-row">
+              <label>Opciones <span class="label-hint">una por línea, de 2 a 6</span>
+                <textarea name="options" rows="4" placeholder="Mejorar la iluminación&#10;Sumar juegos inclusivos&#10;Ampliar el espacio verde" required></textarea>
+              </label>
+              <label>Duración de la votación
+                <div class="duration-input"><input name="duration" type="number" min="1" max="720" value="168" required /><span>horas</span></div>
+                <span class="label-hint">Máximo 720 horas (30 días)</span>
+              </label>
+            </div>
+            <div class="form-footer">
+              <p>Publicar o cerrar una consulta requiere MetaMask en la red local.</p>
+              <button class="button button-primary" type="submit">Publicar consulta</button>
+            </div>
+          </form>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="brand footer-brand" href="/"><span class="brand-mark" aria-hidden="true">C</span><span>CivicTrust</span></a>
+      <span>Demo educativa · Red local · Sin fondos reales</span>
+    </footer>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

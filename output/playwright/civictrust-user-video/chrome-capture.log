@@ -1,0 +1,26 @@
+[1096:10492:1026/212642.086:ERROR:net\base\network_change_notifier_win.cc:224] WSALookupServiceBegin failed with: -1
+[1096:21500:1026/212642.202:ERROR:chrome\installer\util\google_update_settings_win.cc:270] Failed opening key Software\Google\Update\ClientStateMedium\{8A69D345-D564-463c-AFF1-A69D9E530F96} to set usagestats; result: 5
+
+DevTools listening on ws://127.0.0.1:9239/devtools/browser/fc06e646-b7ef-47f5-a274-3be996c010e3
+[1096:17988:1026/213756.889:ERROR:net\base\network_change_notifier_win.cc:224] WSALookupServiceBegin failed with: -1
+[1096:17988:1026/213757.899:ERROR:net\base\network_change_notifier_win.cc:224] WSALookupServiceBegin failed with: -1
+[1096:17988:1026/213758.907:ERROR:net\base\network_change_notifier_win.cc:224] WSALookupServiceBegin failed with: -1
+[1096:17988:1026/213759.922:ERROR:net\base\network_change_notifier_win.cc:224] WSALookupServiceBegin failed with: -1
+[1096:17988:1026/213800.934:ERROR:net\base\network_change_notifier_win.cc:224] WSALookupServiceBegin failed with: -1
+[1096:17988:1026/213801.946:ERROR:net\base\network_change_notifier_win.cc:224] WSALookupServiceBegin failed with: -1
+[1096:17988:1026/213802.949:ERROR:net\base\network_change_notifier_win.cc:224] WSALookupServiceBegin failed with: -1
+[1096:17988:1026/213803.952:ERROR:net\base\network_change_notifier_win.cc:224] WSALookupServiceBegin failed with: -1
+[1096:17988:1026/213804.968:ERROR:net\base\network_change_notifier_win.cc:224] WSALookupServiceBegin failed with: -1
+[1096:17988:1026/213805.998:ERROR:net\base\network_change_notifier_win.cc:224] WSALookupServiceBegin failed with: -1
+[1096:17988:1026/213807.006:ERROR:net\base\network_change_notifier_win.cc:224] WSALookupServiceBegin failed with: -1
+[1096:17988:1026/213808.007:ERROR:net\base\network_change_notifier_win.cc:224] WSALookupServiceBegin failed with: -1
+[1096:17988:1026/213809.012:ERROR:net\base\network_change_notifier_win.cc:224] WSALookupServiceBegin failed with: -1
+[1096:22456:1026/213810.020:ERROR:net\base\network_change_notifier_win.cc:224] WSALookupServiceBegin failed with: -1
+[1096:17988:1026/213811.027:ERROR:net\base\network_change_notifier_win.cc:224] WSALookupServiceBegin failed with: -1
+[1096:22456:1026/213812.029:ERROR:net\base\network_change_notifier_win.cc:224] WSALookupServiceBegin failed with: -1
+[1096:22456:1026/213813.043:ERROR:net\base\network_change_notifier_win.cc:224] WSALookupServiceBegin failed with: -1
+[1096:17988:1026/213814.058:ERROR:net\base\network_change_notifier_win.cc:224] WSALookupServiceBegin failed with: -1
+[1096:17988:1026/213815.070:ERROR:net\base\network_change_notifier_win.cc:224] WSALookupServiceBegin failed with: -1
+[1096:17988:1026/213816.084:ERROR:net\base\network_change_notifier_win.cc:224] WSALookupServiceBegin failed with: -1
+[1096:17988:1026/213817.094:ERROR:net\base\network_change_notifier_win.cc:224] WSALookupServiceBegin failed with: -1
+[1096:17988:1026/213818.098:ERROR:net\base\network_change_notifier_win.cc:224] WSALookupServiceBegin failed with: -1

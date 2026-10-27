@@ -1,0 +1,23 @@
+{
+  "name": "civictrust-mvp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "compile": "hardhat compile",
+    "node": "hardhat node",
+    "deploy:local": "hardhat compile && hardhat run scripts/deploy-local.mjs --network localhost",
+    "serve": "node scripts/web-server.mjs",
+    "dev": "npm run demo",
+    "demo": "node scripts/start-demo.mjs"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^3.1.3",
+    "@semaphore-protocol/contracts": "4.14.3",
+    "@semaphore-protocol/core": "4.14.3",
+    "@semaphore-protocol/hardhat": "4.14.3",
+    "ethers": "^6.14.0",
+    "hardhat": "^2.29.1",
+    "solc": "^0.8.28",
+    "vite": "^7.0.0"
+  }
+}

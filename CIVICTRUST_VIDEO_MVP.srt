@@ -1,0 +1,47 @@
+1
+00:00:00,450 --> 00:00:12,620
+Te presento CivicTrust, una demo local de presupuesto participativo.
+La idea es que los vecinos elijan prioridades barriales
+y que el recuento se pueda auditar.
+
+2
+00:00:13,120 --> 00:00:26,270
+Cada vecino crea o importa una identidad privada.
+Guarda el archivo secreto en su dispositivo y comparte
+solo el compromiso público para pedir el alta.
+
+3
+00:00:26,770 --> 00:00:37,920
+El compromiso público no es la credencial secreta.
+El vecino conserva su archivo privado; la comuna recibe
+solo el dato necesario para habilitarlo en el padrón.
+
+4
+00:00:38,420 --> 00:00:51,570
+El administrador agrega compromisos públicos al padrón,
+sin asociarlos a nombres o direcciones. Esta demo no valida
+DNI ni identidad civil; usa identidades de prueba.
+
+5
+00:00:52,070 --> 00:01:05,220
+Desde el panel se publica una consulta: se define el título,
+la descripción, las opciones y la duración. Luego aparece
+en la página principal.
+
+6
+00:01:05,720 --> 00:01:22,870
+El vecino habilitado selecciona una opción y envía su voto.
+Semaphore genera una prueba de conocimiento cero; el contrato
+verifica el padrón sin revelar su identidad ni aceptar otro voto.
+
+7
+00:01:23,370 --> 00:01:35,520
+El escrutinio se muestra públicamente desde la blockchain local.
+En esta consulta de ejemplo hay un voto para mejorar
+la iluminación.
+
+8
+00:01:36,020 --> 00:01:53,312
+El MVP es local: no se conecta con miBA, DNI ni un padrón real.
+El seguimiento de fondos y obras queda para una etapa futura.
+CivicTrust propone decisiones comunales más transparentes. Gracias.

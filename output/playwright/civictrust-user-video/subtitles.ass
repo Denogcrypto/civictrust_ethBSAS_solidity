@@ -1,0 +1,21 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1280
+PlayResY: 720
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,22,&H00FFFFFF,&H0000FFFF,&H80102A43,&H80102A43,1,0,0,0,100,100,0,0,3,1,0,2,72,72,32,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.45,0:00:12.62,Default,,0,0,0,,Te presento CivicTrust, una demo local de presupuesto participativo.\NLa idea es que los vecinos elijan prioridades barriales\Ny que el recuento se pueda auditar.
+Dialogue: 0,0:00:13.12,0:00:26.27,Default,,0,0,0,,Cada vecino crea o importa una identidad privada.\NGuarda el archivo secreto en su dispositivo y comparte\Nsolo el compromiso público para pedir el alta.
+Dialogue: 0,0:00:26.77,0:00:37.92,Default,,0,0,0,,El compromiso público no es la credencial secreta.\NEl vecino conserva su archivo privado; la comuna recibe\Nsolo el dato necesario para habilitarlo en el padrón.
+Dialogue: 0,0:00:38.42,0:00:51.57,Default,,0,0,0,,El administrador agrega compromisos públicos al padrón,\Nsin asociarlos a nombres o direcciones. Esta demo no valida\NDNI ni identidad civil; usa identidades de prueba.
+Dialogue: 0,0:00:52.07,0:01:05.22,Default,,0,0,0,,Desde el panel se publica una consulta: se define el título,\Nla descripción, las opciones y la duración. Luego aparece\Nen la página principal.
+Dialogue: 0,0:01:05.72,0:01:22.87,Default,,0,0,0,,El vecino habilitado selecciona una opción y envía su voto.\NSemaphore genera una prueba de conocimiento cero; el contrato\Nverifica el padrón sin revelar su identidad ni aceptar otro voto.
+Dialogue: 0,0:01:23.37,0:01:35.52,Default,,0,0,0,,El escrutinio se muestra públicamente desde la blockchain local.\NEn esta consulta de ejemplo hay un voto para mejorar\Nla iluminación.
+Dialogue: 0,0:01:36.02,0:01:53.31,Default,,0,0,0,,El MVP es local: no se conecta con miBA, DNI ni un padrón real.\NEl seguimiento de fondos y obras queda para una etapa futura.\NCivicTrust propone decisiones comunales más transparentes. Gracias.
